@@ -11,18 +11,18 @@
 // Write your solution below.
 // ====================================================================
 
+var num1 = prompt('Enter number')
+var num2 = prompt('Enter another number')
 
+var diff = function(){
+	if(num1<num2){
+		return num2-num1;
+	}else{
+		return num1-num2;
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
+console.log(diff())
 
 // ========================== Exercise 2 ==============================
 // Prompt the user for a number, then console.log its ordinal version.
@@ -38,20 +38,21 @@
 // ====================================================================
 
 
+var num3 =prompt('Enter number');
+var others = [4,5,6,7,8,9,0];
 
+var ordinal = num3.charAt(num3.length-1);
+console.log(ordinal);
 
-
-
-
-
-
-
-
-
-
-
-
-
+if(ordinal==1){
+	console.log(ordinal + 'st');
+}else if(ordinal==2){
+	console.log(ordinal + 'nd');
+}else if(ordinal==3){
+	console.log(ordinal + 'rd');
+}else if(ordinal==others){
+	console.log(ordinal + 'th');
+}
 
 // ========================== Exercise 3 =================================
 // Generate a random integer (hint: search Google or MDN) between 1 to 10.
@@ -61,20 +62,13 @@
 // Write your solution below.
 // =======================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var numRand = Math.floor((Math.random() * 10) + 1);
+var userNumRand = prompt('Enter number between 1 to 10');
+if(userNumRand==numRand){
+	alert('Number matched');
+}else{
+	alert('Number not matched, try again');
+}
 
 // ========================== Exercise 4 ===============================
 // Generate a random string of length 6 alphanumeric characters.
@@ -89,23 +83,16 @@
 // Write your solution below.
 // =====================================================================
 
+function makeid() {
+  var randValue = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+  for (var i = 0; i < 6; i++)
+    randValue += possible.charAt(Math.floor(Math.random() * possible.length));
+  return randValue;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(makeid());
 
 // ========================== Exercise 5 ==============================
 // Shuffle the elements of the given array below.
